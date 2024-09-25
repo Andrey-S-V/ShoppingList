@@ -18,6 +18,7 @@ import com.example.shoppinglist.R
 import com.example.shoppinglist.dialog.MainDialog
 import com.example.shoppinglist.navigation.NavigationGraph
 import com.example.shoppinglist.ui.theme.BlueLight
+import com.example.shoppinglist.utils.Routes
 import com.example.shoppinglist.utils.UiEvent
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -53,7 +54,7 @@ fun MainScreen(
             if (viewModel.showFloatingButton.value) FloatingActionButton(
                 backgroundColor = BlueLight,
                 onClick = {
-                    viewModel.onEvent(MainScreenEvent.OnShowEditDialog)
+                    viewModel.onEvent(MainScreenEvent.OnNewItemClick(currentRoute ?: Routes.SHOPPING_LIST))
                 }) {
                 Icon(
                     painter = painterResource(id = R.drawable.add_icon),
