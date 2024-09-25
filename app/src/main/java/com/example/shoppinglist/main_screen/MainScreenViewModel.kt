@@ -57,7 +57,7 @@ class MainScreenViewModel @Inject constructor(
                     openDialog.value = true
                 }
                 else {
-                    sendUiEvent(UiEvent.NavigateMain(Routes.NEW_NOTE))
+                    sendUiEvent(UiEvent.NavigateMain(Routes.NEW_NOTE + "/-1"))
                 }
             }
             is MainScreenEvent.Navigate -> {

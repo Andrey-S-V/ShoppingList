@@ -75,8 +75,9 @@ fun NewNoteScreen(
                         label = {
                             Text(
                                 text = "Title...",
-                                fontSize = 14.sp
+                                fontSize = 14.sp,
                             )
+
                         },
                         colors = TextFieldDefaults.textFieldColors(
                             backgroundColor = Color.White,
