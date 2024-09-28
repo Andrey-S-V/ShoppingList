@@ -9,5 +9,8 @@ val DarkText = Color(0xFF131313)
 val LightText = Color(0xFF575757)
 
 val Red = Color(0x9EEC0D0D)
+val RedProgress = Color(0xFFF81111)
+val YellowProgress = Color(0xFFF59520)
+val GreenProgress = Color(0xFF53F518)
 val Green = Color(0xCB3FB844)
 val Background = Color(0xD0EC0D0D)

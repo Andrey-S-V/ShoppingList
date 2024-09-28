@@ -1,5 +1,10 @@
 package com.example.shoppinglist.settings_screen
 
+import androidx.compose.ui.graphics.Color
+import com.example.shoppinglist.ui.theme.GreenProgress
+import com.example.shoppinglist.ui.theme.RedProgress
+import com.example.shoppinglist.ui.theme.YellowProgress
+
 object ColorUtils {
     val ColorList = listOf(
         "#FF5733",
@@ -28,4 +33,13 @@ object ColorUtils {
         "#7B1FA2",
         "#FFB74D"
     )
+
+    fun getProgressColor(progress: Float): Color {
+        return when(progress) {
+            in 0.0..0.339 -> RedProgress
+            in 0.34..0.669 -> YellowProgress
+            in 0.67..1.0 -> GreenProgress
+            else -> RedProgress
+        }
+    }
 }
