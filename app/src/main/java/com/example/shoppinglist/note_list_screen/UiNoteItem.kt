@@ -30,6 +30,7 @@ import com.example.shoppinglist.utils.Routes
 
 @Composable
 fun UiNoteItem(
+    titleColor: String,
     item: NoteItem,
     onEvent: (NoteListEvent) -> Unit
 ) {
@@ -65,7 +66,7 @@ fun UiNoteItem(
                     text = item.title,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = DarkText
+                    color = Color(android.graphics.Color.parseColor(titleColor))
                     )
                 Text(
                     modifier = Modifier.padding(

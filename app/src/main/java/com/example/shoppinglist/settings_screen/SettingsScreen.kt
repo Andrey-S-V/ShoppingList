@@ -29,7 +29,7 @@ fun SettingsScreen(
     ) {
         Text(
             text = "Title color",
-            fontSize = 16.sp ,
+            fontSize = 16.sp,
             modifier = Modifier.padding(start = 16.dp, top = 16.dp),
             color = DarkText
         )
@@ -44,8 +44,10 @@ fun SettingsScreen(
                 .fillMaxWidth()
                 .padding(top = 10.dp)
         ) {
-            items(list) {item ->
-                UiColorItem(item)
+            items(list) { item ->
+                UiColorItem(item) { event ->
+                    viewModel.onEvent(event)
+                }
             }
         }
     }

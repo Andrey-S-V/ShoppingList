@@ -1,5 +1,6 @@
 package com.example.shoppinglist.about_screen
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,12 +20,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.shoppinglist.R
 import com.example.shoppinglist.ui.theme.BlueLight
+import com.example.shoppinglist.ui.theme.DarkBlue
 
 @Composable
 fun AboutScreen() {
     val uriHandler = LocalUriHandler.current
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(DarkBlue),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {

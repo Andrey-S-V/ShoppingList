@@ -16,9 +16,14 @@ import com.example.shoppinglist.R
 
 
 @Composable
-fun UiColorItem(item: ColorItem) {
+fun UiColorItem(
+    item: ColorItem,
+    onEvent: (SettingsScreenEvent) -> Unit
+) {
     IconButton(
-        onClick = { },
+        onClick = {
+            onEvent(SettingsScreenEvent.OnItemSelected(item.color))
+        },
         modifier = Modifier
             .padding(start = 10.dp)
             .clip(CircleShape)

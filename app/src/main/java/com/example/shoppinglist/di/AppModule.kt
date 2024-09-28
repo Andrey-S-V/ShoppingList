@@ -9,6 +9,7 @@ import com.example.shoppinglist.data.NoteRepoImpl
 import com.example.shoppinglist.data.NoteRepository
 import com.example.shoppinglist.data.ShoppingListRepoImpl
 import com.example.shoppinglist.data.ShoppingListRepository
+import com.example.shoppinglist.datastore.DataStoreManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,5 +42,11 @@ object AppModule {
     @Singleton
     fun provideNoteRepo(db: MainDb): NoteRepository{
         return NoteRepoImpl(db.noteDao)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDataStoreManager(app: Application): DataStoreManager{
+        return DataStoreManager(app)
     }
 }
